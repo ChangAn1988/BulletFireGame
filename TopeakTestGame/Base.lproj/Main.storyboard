@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TopeakTestGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,142 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="D1R-Vm-Brd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bullet Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWt-mG-jBB">
+                                <rect key="frame" x="16" y="20" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="6Uj-W5-F8y"/>
+                                    <constraint firstAttribute="height" constant="30" id="pRB-xn-EF8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLk-2R-2Qc">
+                                <rect key="frame" x="16" y="58" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gg1-uq-vMc"/>
+                                    <constraint firstAttribute="width" constant="120" id="ux6-Hm-cdG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyV-4g-ozf">
+                                <rect key="frame" x="301" y="20" width="74" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="Ufn-ZS-azO"/>
+                                    <constraint firstAttribute="height" constant="70" id="v1p-EF-jbz"/>
+                                </constraints>
+                                <state key="normal" image="missile-type-3"/>
+                                <connections>
+                                    <action selector="select_Type3_Bullet_Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nib-aI-6db"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQu-PJ-NAJ">
+                                <rect key="frame" x="227" y="20" width="74" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="pDL-Wf-BmG"/>
+                                    <constraint firstAttribute="width" constant="74" id="vqa-KJ-XkJ"/>
+                                </constraints>
+                                <state key="normal" image="missile-type-2"/>
+                                <connections>
+                                    <action selector="select_Type2_Bullet_Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zxk-2c-vGZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="970-RX-JsP">
+                                <rect key="frame" x="153" y="20" width="74" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="7S0-cX-Kbx"/>
+                                    <constraint firstAttribute="height" constant="70" id="b0y-Cb-ZEF"/>
+                                </constraints>
+                                <state key="normal" image="missile-type-1"/>
+                                <connections>
+                                    <action selector="select_Type1_Bullet_Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xs-xe-mfM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acV-lp-kxs">
+                                <rect key="frame" x="143.5" y="563" width="88" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="0bq-at-bcK"/>
+                                    <constraint firstAttribute="width" constant="88" id="WGP-Is-7U7"/>
+                                </constraints>
+                                <state key="normal" image="fire"/>
+                                <connections>
+                                    <action selector="fireBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZlP-qz-brN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missile1" translatesAutoresizingMaskIntoConstraints="NO" id="8kC-tf-zKi">
+                                <rect key="frame" x="341" y="607" width="18" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="TDl-Se-fVf"/>
+                                    <constraint firstAttribute="height" constant="40" id="VFG-YC-WwL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="9Ma-8B-J2d">
+                                <rect key="frame" x="147.5" y="449" width="80" height="101"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16W-Po-sLL">
+                                <rect key="frame" x="16" y="575" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="kR1-dC-Nos"/>
+                                    <constraint firstAttribute="height" constant="72" id="y3B-SR-dFR"/>
+                                </constraints>
+                                <state key="normal" image="AutoFire"/>
+                                <connections>
+                                    <action selector="autoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z0k-IF-rCe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D1R-Vm-Brd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Gm-iN-Dgo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D1R-Vm-Brd" secondAttribute="bottom" id="4lf-Ed-ejx"/>
+                            <constraint firstItem="9Ma-8B-J2d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9aJ-rb-8n8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="acV-lp-kxs" secondAttribute="bottom" constant="20" id="AyH-2Q-18A"/>
+                            <constraint firstItem="LLk-2R-2Qc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BZA-X8-ljo"/>
+                            <constraint firstItem="D1R-Vm-Brd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Eg1-Ds-JTb"/>
+                            <constraint firstItem="UWt-mG-jBB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EjX-qV-LfO"/>
+                            <constraint firstAttribute="trailing" secondItem="YyV-4g-ozf" secondAttribute="trailing" id="Kb2-7t-gJ8"/>
+                            <constraint firstItem="LLk-2R-2Qc" firstAttribute="top" secondItem="UWt-mG-jBB" secondAttribute="bottom" constant="8" id="OdB-K9-Xke"/>
+                            <constraint firstAttribute="trailing" secondItem="D1R-Vm-Brd" secondAttribute="trailing" id="QaK-QY-fpu"/>
+                            <constraint firstItem="pQu-PJ-NAJ" firstAttribute="leading" secondItem="970-RX-JsP" secondAttribute="trailing" id="ShC-Ca-2AG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8kC-tf-zKi" secondAttribute="bottom" constant="20" id="UuD-b0-sfg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="16W-Po-sLL" secondAttribute="bottom" constant="20" id="Yfv-OQ-fvc"/>
+                            <constraint firstItem="acV-lp-kxs" firstAttribute="top" secondItem="9Ma-8B-J2d" secondAttribute="bottom" constant="13" id="Yvf-BA-pWN"/>
+                            <constraint firstItem="YyV-4g-ozf" firstAttribute="leading" secondItem="pQu-PJ-NAJ" secondAttribute="trailing" id="cle-bG-FJV"/>
+                            <constraint firstItem="pQu-PJ-NAJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="f8d-9o-WTf"/>
+                            <constraint firstItem="16W-Po-sLL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fO1-iD-knc"/>
+                            <constraint firstItem="acV-lp-kxs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h8M-gJ-FF3"/>
+                            <constraint firstItem="YyV-4g-ozf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="o5U-5t-zNE"/>
+                            <constraint firstItem="8kC-tf-zKi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oE5-Gw-Mfv"/>
+                            <constraint firstItem="UWt-mG-jBB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qRK-7H-9YR"/>
+                            <constraint firstItem="970-RX-JsP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rJj-5R-FJz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="autoBtnSet" destination="16W-Po-sLL" id="WeL-W6-abG"/>
+                        <outlet property="bulletCountValue" destination="LLk-2R-2Qc" id="4LK-wb-XID"/>
+                        <outlet property="bulletImageView" destination="8kC-tf-zKi" id="HTp-Bs-SCT"/>
+                        <outlet property="planeImageView" destination="9Ma-8B-J2d" id="cBa-X7-AAf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="100" y="158"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AutoFire" width="120" height="120"/>
+        <image name="background" width="319" height="568"/>
+        <image name="fire" width="88" height="84"/>
+        <image name="missile-type-1" width="73" height="69"/>
+        <image name="missile-type-2" width="73" height="69"/>
+        <image name="missile-type-3" width="73" height="69"/>
+        <image name="missile1" width="18" height="39"/>
+        <image name="plane" width="80" height="101"/>
+    </resources>
 </document>

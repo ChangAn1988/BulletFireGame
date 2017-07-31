@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00500CE81F2F0BF500194958 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00500CE71F2F0BF500194958 /* Bullet.swift */; };
 		00A2A35A1F29EC020095E237 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2A3591F29EC020095E237 /* AppDelegate.swift */; };
 		00A2A35C1F29EC020095E237 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2A35B1F29EC020095E237 /* ViewController.swift */; };
 		00A2A35F1F29EC020095E237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A2A35D1F29EC020095E237 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00500CE71F2F0BF500194958 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
 		00A2A3561F29EC020095E237 /* TopeakTestGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopeakTestGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A2A3591F29EC020095E237 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00A2A35B1F29EC020095E237 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00500CE91F2F1BBD00194958 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				00500CE71F2F0BF500194958 /* Bullet.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		00500CEA1F2F1BD300194958 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00A2A35B1F29EC020095E237 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		00A2A34D1F29EC020095E237 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +72,9 @@
 		00A2A3581F29EC020095E237 /* TopeakTestGame */ = {
 			isa = PBXGroup;
 			children = (
+				00500CE91F2F1BBD00194958 /* model */,
+				00500CEA1F2F1BD300194958 /* Controller */,
 				00A2A3591F29EC020095E237 /* AppDelegate.swift */,
-				00A2A35B1F29EC020095E237 /* ViewController.swift */,
 				00A2A35D1F29EC020095E237 /* Main.storyboard */,
 				00A2A3601F29EC020095E237 /* Assets.xcassets */,
 				00A2A3621F29EC020095E237 /* LaunchScreen.storyboard */,
@@ -139,6 +158,7 @@
 			files = (
 				00A2A35C1F29EC020095E237 /* ViewController.swift in Sources */,
 				00A2A35A1F29EC020095E237 /* AppDelegate.swift in Sources */,
+				00500CE81F2F0BF500194958 /* Bullet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +285,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QUGRN27H3U;
 				INFOPLIST_FILE = TopeakTestGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.changan.chen.TopeakTestGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QUGRN27H3U;
 				INFOPLIST_FILE = TopeakTestGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.changan.chen.TopeakTestGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +326,7 @@
 				00A2A36A1F29EC020095E237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
